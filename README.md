@@ -7,7 +7,10 @@ You can use the [editor on GitHub](https://github.com/fkarimzadeh6/CX4240_projec
 Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
 
 # Problem Definition and Motivation:
-During  the  past  decades,  a  great  body  of research   has   been   devoted   to   automatic   sleep   stage scoring using the electroencephalogram (EEG).  Automatically and accurate classification of sleep stages from EEG signals are critical due to the fact that these information will be used for dioagnosing different sleep disorders. However, the results are not yet satisfactory to be used as a standard procedure  in  clinical  studies.  In  this  project, we have investigated different machine learning algorithms to automatically classify sleep stages and compared the results. 
+During  the  past  decades,  a  great  body  of research   has   been   devoted   to   automatic   sleep   stage scoring using the electroencephalogram (EEG).  
+  - Automatically and accurate classification of sleep stages from EEG signals are critical due to the fact that these information will be used for dioagnosing different sleep disorders.  
+  - Moreover, manual sleep scoring is a time-consuming process for an expert which is prone to human error. 
+  However, the results are not yet satisfactory to be used as a standard procedure  in  clinical  studies.In  this  project, we have investigated different machine learning algorithms to automatically classify sleep stages and compared the results.
 
 - Bulleted
 - List
