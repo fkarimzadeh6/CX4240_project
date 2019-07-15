@@ -11,10 +11,14 @@ During  the  past  decades,  a  great  body  of research   has   been   devoted 
   - First, the fact that these information will be used for dioagnosing different sleep disorders.  
   - Second, manual sleep scoring is a time-consuming process for an expert which is prone to human error. 
   
-  However, the results are not yet satisfactory to be used as a standard procedure  in  clinical  studies.In  this  project, we have investigated different machine learning algorithms to automatically classify sleep stages and compared the results.
+  However, the results are not yet satisfactory to be used as a standard procedure  in  clinical  studies.In  this  project, we have investigated different machine learning algorithms to automatically classify sleep stages and compared the results.The overal process for sleep stage scoring consists of three steps which are explained below: 
+  1. Preprocessing
+  2. Feature Extraction
+  3. Classification 
+  
+  
 
-1. Numbered
-2. List
+
 
 **Bold** and _Italic_ and `Code` text
 
