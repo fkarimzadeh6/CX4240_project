@@ -1,4 +1,4 @@
-# Your name is Forouzan Welcome to GitHub Pages
+# Automatic Annotation of EEG signals for different stages of a sleep cycle using Machine Learning
 
 
 You can use the [editor on GitHub](https://github.com/fkarimzadeh6/CX4240_project/edit/master/README.md) to maintain and preview the content for your website in Markdown files.
