@@ -1,13 +1,10 @@
-# Your name is Forouzan Welcome to GitHub Pages
+# Supervised Learning after Feature Extraction
+[Code (Jupyter Notebook)](https://nbviewer.jupyter.org/github/fkarimzadeh6/CX4240_project/blob/Nael/clustering_top_v2.ipynb)
+### Dataset
+The original dataset consists of 16330 samples, 1633 each from 10 different subjects. Each sample is accompanied by a label (N1, N2, N3, N4 and REM) denoted by 0,1,2,3,4 respectively. The dataset is trimmed to eliminate the first 833 samples which consists entirely of a single label (0). This would have biased the dataset heavily towards a single label. The trimmed dataset now consists of 8330 samples each with 7 features. The following charts shows the distribution of various labels within the dataset. The dataset contains the most of the N2 stage as is expected in a standard sleeping pattern of a subject:
+![image](https://github.com/fkarimzadeh6/CX4240_project/blob/Nael/pics/pie.png)
 
 
-You can use the [editor on GitHub](https://github.com/fkarimzadeh6/CX4240_project/edit/master/README.md) to maintain and preview the content for your website in Markdown files.
-
-Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
-
-### Markdown
-
-Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for
 
 ```markdown
 Syntax highlighted code block
