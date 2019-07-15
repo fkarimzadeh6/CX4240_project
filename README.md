@@ -1,10 +1,5 @@
-# Your name is Forouzan Welcome to GitHub Pages
-
-
-You can use the [editor on GitHub](https://github.com/fkarimzadeh6/CX4240_project/edit/master/README.md) to maintain and preview the content for your website in Markdown files.
-
-Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
-
+# Supervised Learning after Feature Extraction
+[Full Code (Jupyter Notebook)](https://nbviewer.jupyter.org/github/fkarimzadeh6/CX4240_project/blob/Nael/clustering_top_v2.ipynb)
 ### Markdown
 
 Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for
