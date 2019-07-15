@@ -5,7 +5,7 @@ The original dataset consists of 16330 samples, 1633 each from 10 different subj
 ![image](https://github.com/fkarimzadeh6/CX4240_project/blob/Nael/pics/pie.png)
 
 ### Perceptron Algorithm 
-
+![image](https://upload.wikimedia.org/wikipedia/commons/a/aa/Perceptron_training_without_bias.gif)
 
 
 
