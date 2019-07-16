@@ -15,7 +15,7 @@ Random Forest Ensemble works by creating n number of decision trees and splittin
 In order to achieve a more accurate result, K fold cross-validation was also implemented for the data set. Cross validation is typically used to combat overfitting. Because the data was already split into 10 individual subjects, 10 folds were used in congruence with Random Forest Ensemble. This means that the same Random Forest algorithm as before was run, however each subject's data set acted as the test data for one iteration. On average between each fold, results were still around 82% accuracy. 
 ## Tuning
 
-The RandomForestClassifier function is provided with Scikit Learn, and has many different potential parameters. In order to reach the highest result possible the Random Forest was run with many different parameters. Use of the out-of-bag (OOB_score) parameter proved to be very useful, since it helps fit and validate the data while being trained.
+The RandomForestClassifier function is provided with Scikit Learn, and has many different potential parameters. In order to reach the highest result possible the Random Forest was run with many different parameters. Use of the out-of-bag (OOB_score) parameter proved to be very useful, since it helps fit and validate the data while being trained. The precision score of the Random Forest on this dataset came to be 76%. 
 
 
 ### Jekyll Themes
