@@ -1,21 +1,22 @@
+<p align="center">
 # Automatic Annotation of EEG signals for different stages of a sleep cycle using Machine Learning
 ## Foroozan Karimzadeh, Nael Mizanur Rahman, Nihad Ljubuncic
-
+</p>
 
 # Problem Definition and Motivation:
 During  the  past  decades,  a  great  body  of research   has   been   devoted   to   automatic   sleep   stage scoring using the electroencephalogram (EEG). According to the AASM manual, each of the five stages is defined below and also illustrated in Fig. 1: ![Image](https://github.com/fkarimzadeh6/CX4240_project/blob/master/Figure/Stage.jpg) Fig.1. This figure illustrates Wake, N1, N2, N3, REM stages, from top to bottom panels, respectively.
 
--W: Awake state (stage W) is characterized by alpha or faster frequency bands occupying more than 50% of the epoch, frequent eye movements and high EMG tone.
+**-W:** Awake state (stage W) is characterized by alpha or faster frequency bands occupying more than 50% of the epoch, frequent eye movements and high EMG tone.
 
--N1: Stage N1 is scored when alpha occupies more than 50% of epoch while theta activity, slow rolling eye movements and vertex waves are evident.
+**-N1:** Stage N1 is scored when alpha occupies more than 50% of epoch while theta activity, slow rolling eye movements and vertex waves are evident.
 
--N2: Stage N2 is scored when sleep spindles or K-complexes (less than 3 min apart) are noted.
+**-N2:** Stage N2 is scored when sleep spindles or K-complexes (less than 3 min apart) are noted.
 
--N3: Stage N3 is characterized by delta activity detected in over 20% of the epoch length.
+**-N3:** Stage N3 is characterized by delta activity detected in over 20% of the epoch length.
 
--REM: Upon sleep scoring an epoch is marked as REM when saw-tooth waves along with rapid eye movements as well as lowest EMG signals are observed through each epoch.
+**-REM:** Upon sleep scoring an epoch is marked as REM when saw-tooth waves along with rapid eye movements as well as lowest EMG signals are observed through each epoch.
 
-  Automatically and accurate classification of sleep stages from EEG signals are critical due to two reasons:
+  Automatic and accurate classification of sleep stages from EEG signals are critical due to two reasons:
   - First, the fact that these information will be used for dioagnosing different sleep disorders.  
   - Second, manual sleep scoring is a time-consuming process for an expert which is prone to human error. 
   
