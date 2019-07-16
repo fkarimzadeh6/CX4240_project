@@ -50,6 +50,8 @@ where _p_ is the histogram distribution of wavelet coefficients in each band wit
 	
 These entropy values are arranged in a feature vector for each epoch. Therefore, by calculating the entropy in seven frequency bands for CWT, a feature vector consisting of 7 elements for each epoch is formed. This is repeated for all epochs in the entire EEG signal. The sleep stage classification process is then continued by feeding these features into different classifiers, discussed subsequently.
 
+[Code](https://github.com/fkarimzadeh6/CX4240_project/tree/master/code)
+
 # Supervised Learning after Feature Extraction
 [Code (Jupyter Notebook)](https://nbviewer.jupyter.org/github/fkarimzadeh6/CX4240_project/blob/Nael/clustering_top_v2.ipynb)
 ## Dataset After Feature Extraction
