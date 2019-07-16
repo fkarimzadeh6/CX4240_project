@@ -11,10 +11,11 @@ The Perceptron learning algorithm is a linear classifer that assigns weights to 
 <p align="center">
   <img width="460" height="300" src="https://github.com/fkarimzadeh6/CX4240_project/blob/Nael/pics/Capture.PNG">
 </p>
-An example of the change in the hyperplane as the weights are updated is demonstrated below:
-<p align="center">
-  <img width="460" height="350" src="https://upload.wikimedia.org/wikipedia/commons/a/aa/Perceptron_training_without_bias.gif">
-</p>
+
+Considering this fact, the convergance of the algorithm is a fair metric to verify the linearity of the dataset. Should the algorithm converge when applied to the given samples, the dataset can be assumed to be linearly separable. The perceptron algorithm, however, failed to converge on the EEG dataset even after 50000 iterations. There was thus no sufficiently viable linear hyperplane that could efficently separate the different classes. 
+
+### Support Vector Machine
+Support Vector machines have been used to classify EEG signals in several previous research works[2]. Several variations of the algorithm have also been applied.  
 
 
 ```markdown
