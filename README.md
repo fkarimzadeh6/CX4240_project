@@ -12,7 +12,12 @@ The Perceptron learning algorithm is a linear classifer that assigns weights to 
   <img width="460" height="300" src="https://github.com/fkarimzadeh6/CX4240_project/blob/Nael/pics/Capture.PNG">
 </p>
 
-Considering this fact, the convergance of the algorithm is a fair metric to verify the linearity of the dataset. Should the algorithm converge when applied to the given samples, the dataset can be assumed to be linearly separable. The perceptron algorithm, however, failed to converge on the EEG dataset even after 50000 iterations. There was thus no sufficiently viable linear hyperplane that could efficently separate the different classes. 
+Considering this fact, the convergance of the algorithm is a fair metric to verify the linearity of the dataset. Should the algorithm converge when applied to the given samples, the dataset can be assumed to be linearly separable. The perceptron algorithm, however, failed to converge on the EEG dataset even after 50000 iterations. 
+<p align="center">
+  <img width="460" height="300" src="https://github.com/fkarimzadeh6/CX4240_project/blob/Nael/pics/perceptronloss.PNG">
+</p>
+The difference in the average loss even after 50000 iterations showed variations greater than the tolerance of (1e-3) and therefore failed to provide an final stable weight matrix. 
+There was, thus, no sufficiently viable linear hyperplane that could efficently separate the different classes. 
 
 ## Support Vector Machine
 Support Vector machines have been used to classify EEG signals in several previous research works[2]. Lajnef *et al* have so far demonstrated one of the best result on EEG classifcation. Their endevor focused on the the use of a dendogram based multi class SVM that achieved an overall accuracy of 92%. Our work focuses on the classical one-vs-one multiclass classification using SVM, employing different kernels. As mentioned before, the dataset does not appear to be linearly separable and therefore requires non-linear kernels for SVM. 
