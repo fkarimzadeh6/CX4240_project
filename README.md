@@ -4,8 +4,7 @@
 
 
 # Problem Definition and Motivation:
-During  the  past  decades,  a  great  body  of research   has   been   devoted   to   automatic   sleep   stage scoring using the electroencephalogram (EEG). According to the AASM manual, each of the five stages is defined below and also illustrated in Fig. 1: ![Image](https://github.com/fkarimzadeh6/CX4240_project/blob/master/Figure/Stage.jpg)
-<p align="center">
+During  the  past  decades,  a  great  body  of research   has   been   devoted   to   automatic   sleep   stage scoring using the electroencephalogram (EEG). According to the AASM manual, each of the five stages is defined below and also illustrated in Fig. 1: ![Image](https://github.com/fkarimzadeh6/CX4240_project/blob/master/Figure/Stage.jpg) <p align="center">
 Fig.1. This figure illustrates Wake, N1, N2, N3, REM stages, from top to bottom panels, respectively.
 </p>
 **-W:** Awake state (stage W) is characterized by alpha or faster frequency bands occupying more than 50% of the epoch, frequent eye movements and high EMG tone.
