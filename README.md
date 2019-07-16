@@ -47,14 +47,18 @@ The labels 0,1,2,3 and 5 represent labels Wake,N1,N2,N3 and REM sleep stages res
 The KNN classifier classifies a sample based on its proximity to samples of different classes in its vicinity. It is a popular clustering algorithm and has been used for sleep stage classification as well [3]. The most important hyperparameter to be trained here is the number of neighbours to be considered. If the number of neighbours is too small, it could lead to overfitting and a loss of generality in the dataset. The cross validation sheme used here is similar to the one articulated for the SVM. The variation in accuracy with the number of neighbours is given below:
 ![image](https://github.com/fkarimzadeh6/CX4240_project/blob/Nael/pics/KNNcv.png)
 
+An optimum K_neighbours of 21 was chosen and used on the testing dataset.
+
+### Performance Metrics of KNN:
+**The KNN algorithm achieved an accuracy of 52.22% on the test dataset**. 
+This is slightly lower than that achieved by SVM but not significantly so. A detailed look at the confusion matrices plotted below shows the classifer heavily favours label 2 and label 0. Again this is expected due to the imbalance of labels in the original dataset as explained above. 
+
 ## References:
 1. http://www.cs.columbia.edu/~mcollins/courses/6998-2012/notes/perc.converge.pdf
 2. Lajnef, Tarek, et al . "Learning machines and sleeping brains: automatic sleep stage classification using
 decision-tree multi-class support vector machines." Journal of neuroscience methods 250 (2015): 94-105
 3. Aboalayon, Khald, et al. "Sleep stage classification using EEG signal analysis: a comprehensive survey and new investigation." Entropy 18.9 (2016): 272.
 
-
-For more details see [GitHub Flavored Markdown](https://guides.github.com/features/mastering-markdown/).
 
 ### Jekyll Themes
 
