@@ -54,10 +54,10 @@ An optimum K_neighbours of 21 was chosen and used on the testing dataset.
 ### Performance Metrics of KNN:
 **The KNN algorithm achieved an accuracy of 52.22% on the test dataset**. 
 This is slightly lower than that achieved by SVM but not significantly so. A detailed look at the confusion matrices plotted below shows the classifer heavily favours label 2 and label 0. Again this is expected due to the imbalance of labels in the original dataset as explained above. 
-![image](https://github.com/fkarimzadeh6/CX4240_project/blob/Nael/pics/KNNcv.png)
+![image](https://github.com/fkarimzadeh6/CX4240_project/blob/Nael/pics/KNNaccuracy.png)
 <p float="left">
-  <img src="https://github.com/fkarimzadeh6/CX4240_project/blob/Nael/pics/KNNconfusion.png" width="500" />
-  <img src="https://github.com/fkarimzadeh6/CX4240_project/blob/Nael/pics/KNNconfusionnormal.png" width="500" />
+  <img src="https://github.com/fkarimzadeh6/CX4240_project/blob/Nael/pics/KNNconfusion.png" width="400" />
+  <img src="https://github.com/fkarimzadeh6/CX4240_project/blob/Nael/pics/KNNconfusionnormal.png" width="400" />
 </p>
 
 ## References:
