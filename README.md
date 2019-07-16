@@ -43,29 +43,15 @@ stages are better detected (visually) in this channel. The overal percentage of 
   Contineous wavelet transform (CWT) is used to represent EEG signals into the time-frequency domain \cite{LFraiwan3}. We employed mother wavelets of Daubechies (db20) with center frequency of 0.67. After passing the EEGs through wavelet's filters, entropy of each filtered signal is determined according to Eq.~\ref{eq31} for each of the frequency bands shown in Table~\ref{tab01}. Moreover, Beta band is divided into two sub-bands with frequencies of $ 13-22 $ and $ 22-35 Hz $; therefore, 7 frequency bands are totally considered. 
 	
 	\begin{equation}
-	\label{eq31}
-	Ent=-\Sigma_{i=1}^n p_i log p_i
+		\label{eq31}
+		Ent=-\Sigma_{i=1}^n p_i log p_i
 	\end{equation}
 	where $ p $ is the histogram distribution of wavelet coefficients in each band with $ n $ bins.
 	
 	These entropy values are arranged in a feature vector for each epoch. Therefore, by calculating the entropy in seven frequency bands for CWT, a feature vector consists of 7 elements for each epoch is formed and continued for the entire EEG signals. The sleep stage classification process is ended by feeding these features to classifier.
   
   
-  
-
-  
-  
-
-
-
-**Bold** and _Italic_ and `Code` text
-
-[Link](url) and ![Image](src)
-```
-
-For more details see [GitHub Flavored Markdown](https://guides.github.com/features/mastering-markdown/).
-
-### Jekyll Themes
+ 
 
 Your Pages site will use the layout and styles from the Jekyll theme you have selected in your [repository settings](https://github.com/fkarimzadeh6/CX4240_project/settings). The name of this theme is saved in the Jekyll `_config.yml` configuration file.
 
