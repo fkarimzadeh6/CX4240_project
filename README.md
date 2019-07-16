@@ -4,7 +4,7 @@
 
 
 # Problem Definition and Motivation:
-During  the  past  decades,  a  great  body  of research   has   been   devoted   to   automatic   sleep   stage scoring using the electroencephalogram (EEG). According to the AASM manual, sleep EEg consists of 5 different stages. Each of the five stages is defined below and also illustrated in Fig. 1: ![Image](https://github.com/fkarimzadeh6/CX4240_project/blob/master/Figure/Stage.jpg) *Fig.1. This figure illustrates Wake, N1, N2, N3, REM stages, from top to bottom panels, respectively.*
+During  the  past  decades,  a  great  amount  of research   has   been   devoted   to   automatic   sleep   stage scoring using the electroencephalogram (EEG) signal. According to the AASM manual, each of the five stages is defined below and also illustrated in Fig. 1: ![Image](https://github.com/fkarimzadeh6/CX4240_project/blob/master/Figure/Stage.jpg) *Fig.1. This figure illustrates Wake, N1, N2, N3, REM stages, from top to bottom panels, respectively.*
 
 
 **-W:** Awake state (stage W) is characterized by alpha or faster frequency bands occupying more than 50% of the epoch, frequent eye movements and high EMG tone.
@@ -17,7 +17,7 @@ During  the  past  decades,  a  great  body  of research   has   been   devoted 
 
 **-REM:** Upon sleep scoring an epoch is marked as REM when saw-tooth waves along with rapid eye movements as well as lowest EMG signals are observed through each epoch.
 
-  Automatic and accurate classification of sleep stages from EEG signals are critical due to the following reasons:
+  Automatic and accurate classification of sleep stages from EEG signals are critical due to three reasons:
   - First, the fact that these information will be used for dioagnosing different sleep disorders such as sleep apnea, parasomnia, narcolepsy etc..  
   - Second, manual sleep scoring is a time-consuming process for an expert which is prone to human error. 
   - Finally, smart EEG machines reduce depandance on expert perosnnel, who may not be readily avaibale at all times. 
@@ -32,26 +32,17 @@ During  the  past  decades,  a  great  body  of research   has   been   devoted 
   
   ![Image](https://github.com/fkarimzadeh6/CX4240_project/blob/master/Figure/SleepStageProcess.PNG)
   
-## Data:
+## Dataset:
   
-  publicly available sleep datasets provided by [PhysioBank](http://physionet.org/physiobank/database/sleep-edfx/) has been employed in this study to assess the proposed methods. The utilized set is the SleepEDF Database contains ten healthy subjects without any sleep-related medication. The PSGs include EEG, EOG and EMG signals of healthy young subjects within the age range of 21-35. The EEG has been sampled at 100 Hz, divided into 30 s epochs and manually annotated. The annotationsconsist of sleep stages including W, R, N1, N2, N3. For this study, the single-channel Pz-Oz is used according to former studies [1], as it has been suggested that deeper sleep stages are better detected (visually) in this channel.
+  The publicly available sleep datasets provided by [PhysioBank](http://physionet.org/physiobank/database/sleep-edfx/) has been employed in this study to assess the proposed methods. The utilized set in the SleepEDF Database contains ten healthy subjects without any sleep-related medication. The PSGs include EEG, EOG and EMG signals of healthy young subjects within the age range of 21-35. The EEG signal has been sampled at 100 Hz, divided into 30 s epochs and manually annotated. The annotations consist of sleep stages including W, R, N1, N2, N3. For this study, the single-channel Pz-Oz is used according to former studies [21], [34], as it has been suggested that deeper sleep stages are better detected (visually) in this channel. The overal percentage of each stage in our dataset are illustrated in figure 3.
 
 ## Preprocessing:
 
-  To enhance the EEG signal quality, a preprocessing step is required. Given a raw input EEG signal, a band-pass filter (Butterworth of order eight) with pass-band bandwidth of 0.5–40 Hz is applied. We also remove the movement noises by using this range, as these kind of noises usually accure at much higher frequency.
+  To enhance the EEG signal quality, a preprocessing step is required. Given a raw input EEG signal, a band-pass filter (Butterworth of order eight) with pass-band bandwidth of 0.5–40 Hz is applied. We also remove the movement noises by using this range, as these noise usually accure at much higher frequency.
   
 ## Feature Extraction: 
 
-  Contineous wavelet transform (CWT) is used to represent EEG signals into the time-frequency domain. We employed mother wavelets of Daubechies (db20) with center frequency of 0.67. After passing the EEGs through wavelet's filters, entropy of each filtered signal is determined according to Eq.1 for each of the frequency bands including 
-  - delta (0-4 Hz), 
-  - theta (4-8 Hz), 
-  - alpha (8-12 Hz), 
-  - beta1(13-22 Hz), 
-  - beta2 (022-30 Hz),  
-  - sleep spindle(12-14 Hz),
-  - K-complex (0.5-1.5 Hz); 
-  
-  therefore, 7 frequency bands are totally considered. 
+  Contineous wavelet transform (CWT) is used to represent EEG signals into the time-frequency domain \cite{LFraiwan3}. We employed mother wavelets of Daubechies (db20) with center frequency of 0.67. After passing the EEGs through wavelet's filters, entropy of each filtered signal is determined according to Eq.1 for each of the frequency bands including delta (0-4 Hz), theta (4-8 Hz), alpha (8-12 Hz), beta1(13-22 Hz), beta2 ()022-30 Hz. We also extract features related to sleep spindle(12-14 Hz) and K-complex (0.5-1.5 Hz); therefore, 7 frequency bands are totally considered. 
   
   ![Image](https://github.com/fkarimzadeh6/CX4240_project/blob/master/Figure/entropy.JPG)
 	
@@ -84,7 +75,7 @@ There was, thus, no sufficiently viable linear hyperplane that could efficently 
 Support Vector machines have been used to classify EEG signals in several previous research works[2]. Lajnef *et al* have so far demonstrated one of the best result on EEG classifcation. Their endevor focused on the the use of a dendogram based multi class SVM that achieved an overall accuracy of 92%. Our work focuses on the classical one-vs-one multiclass classification using SVM, employing  non-linear kernels. As mentioned before, the dataset does not appear to be linearly separable and therefore requires non-linear kernels for SVM. For our current study, we resorted to the Radiul Basis Function kernel and optimized the hyperparameters associated with it.
 
 ### Cross Validation and Hyperparamters
-For this work, we chose to optimize two hyper parameters: gamma (for regulairzation) and C (penalty paramter for the error function). The optimization of parameters was done using a 5-fold cross validation on the traininng dataset. The training dataset consisted of 90% of the original dataset, while the remaining 10% was left for testing. The scoring metric upon which the cross_validation was judged was the average accuracy of prediction. 
+For this work, we chose to optimize two hyper parameters: gamma (for regulairzation) and C (penalty paramter for the error function). The optimization of parameters was done using a 5-fold cross validation on the traininng dataset. The training dataset consisted of 90% of the original dataset, while the remaining 10% was left for testing. The scoring metric upon which the cross_validation was judged was the average accuracy of prediction. It is important to note that both the training and testing feature matrices were scaled across each feature before being fed into the SVM.
 ![image](https://github.com/fkarimzadeh6/CX4240_project/blob/Nael/pics/svmflowchart.PNG)
 
 ### Hyperparameter, C
@@ -94,7 +85,7 @@ The variation in accuracy with changes in C is shown. The graph shows a maxima f
 
 ### Hyperparameter, gamma:
 The gamma parameter determines the spread of the RBF kernel. It can be thought of as the inverse of the radius of influence of the samples that are considered to be support vectors by the kernel. A small value of gamma forces teh kernel to adopt a somewhat linear shape, redcuing its curvature. A high vlaue of gamma makes the kernel a bit more non-linear, often allowing islands of decision boundaries to be generated. For detailed explanation [click here](https://chrisalbon.com/machine_learning/support_vector_machines/svc_parameters_using_rbf_kernel/).
-The variation of accuracy across gamma is plotted below, showing a local maxima at gamma = 3. While it is possible that this maxima is just a local maxima and another global maxima may exist, time and computation restrictions prevented us from broadening the search space for this parameter.
+The variation of accuracy across gamma is plotted below, showing a local maxima at gamma = 3. While it is possible that this maxima is  a local maxima and another global maxima may exist, time and computation restrictions prevented us from broadening the search space for this parameter.
 ![image](https://github.com/fkarimzadeh6/CX4240_project/blob/Nael/pics/gamma.png)
 
 ### Performance metrics of SVM:
@@ -122,12 +113,10 @@ This is slightly lower than that achieved by SVM but not significantly so. A det
 </p>
 
 ## References:
-
-1. V.  Bajaj  and  R.  B.  Pachori,  “Automatic  classification  of  sleep  stages based on the time-frequency  image of EEG signals,” Comput. Methods Programs Biomed. , vol. 112, no. 3, pp. 320–328, 2013.
-2. http://www.cs.columbia.edu/~mcollins/courses/6998-2012/notes/perc.converge.pdf
-3. Lajnef, Tarek, et al . "Learning machines and sleeping brains: automatic sleep stage classification using
+1. http://www.cs.columbia.edu/~mcollins/courses/6998-2012/notes/perc.converge.pdf
+2. Lajnef, Tarek, et al . "Learning machines and sleeping brains: automatic sleep stage classification using
 decision-tree multi-class support vector machines." Journal of neuroscience methods 250 (2015): 94-105
-4. Aboalayon, Khald, et al. "Sleep stage classification using EEG signal analysis: a comprehensive survey and new investigation." Entropy 18.9 (2016): 272.
+3. Aboalayon, Khald, et al. "Sleep stage classification using EEG signal analysis: a comprehensive survey and new investigation." Entropy 18.9 (2016): 272.
   
   
  
