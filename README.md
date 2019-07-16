@@ -40,7 +40,8 @@ stages are better detected (visually) in this channel. The overal percentage of 
   
 ## Feature Extraction: 
 
-  Contineous wavelet transform (CWT) is used to represent EEG signals into the time-frequency domain \cite{LFraiwan3}. We employed mother wavelets of Daubechies (db20) with center frequency of 0.67. After passing the EEGs through wavelet's filters, entropy of each filtered signal is determined according to Eq.1 for each of the frequency bands including delta (0-4 Hz), theta (4-8 Hz), alpha (8-12 Hz), beta1(13-22 Hz), beta2 ()022-30 Hz. We also extract features related to sleep spindle(12-14 Hz) and K-complex (0.5-1.5 Hz). Moreover, Beta band is divided into two sub-bands with frequencies of 13-22 and 22-35 Hz; therefore, 7 frequency bands are totally considered. 
+  Contineous wavelet transform (CWT) is used to represent EEG signals into the time-frequency domain \cite{LFraiwan3}. We employed mother wavelets of Daubechies (db20) with center frequency of 0.67. After passing the EEGs through wavelet's filters, entropy of each filtered signal is determined according to Eq.1 for each of the frequency bands including delta (0-4 Hz), theta (4-8 Hz), alpha (8-12 Hz), beta1(13-22 Hz), beta2 ()022-30 Hz. We also extract features related to sleep spindle(12-14 Hz) and K-complex (0.5-1.5 Hz); therefore, 7 frequency bands are totally considered. 
+  
   ![Image](https://github.com/fkarimzadeh6/CX4240_project/blob/master/Figure/entropy.JPG)
 	
 where _p_ is the histogram distribution of wavelet coefficients in each band with _n_ bins.
