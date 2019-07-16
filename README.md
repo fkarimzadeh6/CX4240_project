@@ -143,7 +143,7 @@ The RandomForestClassifier function is provided with Scikit Learn, and has many 
 
 
 ## References:
-1. [21]   V.  Bajaj  and  R.  B.  Pachori,  “Automatic  classification  of  sleep  stages based on the time-frequency  image of EEG signals,” Comput. Methods Programs Biomed. , vol. 112, no. 3, pp. 320–328, 2013.
+1. V.  Bajaj  and  R.  B.  Pachori,  “Automatic  classification  of  sleep  stages based on the time-frequency  image of EEG signals,” Comput. Methods Programs Biomed. , vol. 112, no. 3, pp. 320–328, 2013.
 2. L. Fraiwan, K. Lweesy, N. Khasawneh, M. Fraiwan, H. Wenz, H. Dickhaus, et al. Classification of sleep stages using multi-wavelet time frequency entropy and lda Methods Inf. Med., 49 (3) (2010), p. 230
 3. http://www.cs.columbia.edu/~mcollins/courses/6998-2012/notes/perc.converge.pdf
 4. Lajnef, Tarek, et al . "Learning machines and sleeping brains: automatic sleep stage classification using
