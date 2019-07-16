@@ -34,11 +34,11 @@ During  the  past  decades,  a  great  amount  of research   has   been   devote
   
 ## Raw Dataset:
   
-  The publicly available sleep datasets provided by [PhysioBank](http://physionet.org/physiobank/database/sleep-edfx/) has been employed in this study to assess the proposed methods. The utilized set in the SleepEDF Database contains ten healthy subjects without any sleep-related medication. The PSGs include EEG, EOG and EMG signals of healthy young subjects within the age range of 21-35. The EEG signal has been sampled at 100 Hz, divided into 30 s epochs and manually annotated. The annotations consist of sleep stages including W, R, N1, N2, N3. For this study, the single-channel Pz-Oz is used according to former studies [21], [34], as it has been suggested that deeper sleep stages are better detected (visually) in this channel. The overal percentage of each stage in our dataset are illustrated in a pie chart in the proceeding section (Dataset After Feature Extraction).
+  The publicly available sleep datasets provided by [PhysioBank](http://physionet.org/physiobank/database/sleep-edfx/) has been employed in this study to assess the proposed methods. The utilized set in the SleepEDF Database contains ten healthy subjects without any sleep-related medication. The PSGs include EEG, EOG and EMG signals of healthy young subjects within the age range of 21-35. The EEG signal has been sampled at 100 Hz, divided into 30 s epochs and manually annotated. The annotations consist of sleep stages including W, R, N1, N2, N3. For this study, the single-channel Pz-Oz is used according to former studies [21], [34], as it has been suggested that deeper sleep stages are better detected (visually) in this channel. The overal percentages of each stage in our dataset is illustrated in a pie chart in the section: Dataset After Feature Extraction.
 
 ## Preprocessing:
 
-  To enhance the EEG signal quality, a preprocessing step is required. Given a raw input EEG signal, a band-pass filter (Butterworth of order eight) with pass-band bandwidth of 0.5–40 Hz is applied. We also remove the movement noises by using this range, as these noise usually accure at much higher frequency.
+  To enhance the EEG signal quality, a preprocessing step is required. Given a raw input EEG signal, a band-pass filter (Butterworth of order eight) with pass-band bandwidth of 0.5–40 Hz is applied. Noise in the EEG signal caused due to movement are also removed by using a filter of this range, as this noise usually occurs at a much higher frequency.
   
 ## Feature Extraction: 
 
@@ -48,12 +48,12 @@ During  the  past  decades,  a  great  amount  of research   has   been   devote
 	
 where _p_ is the histogram distribution of wavelet coefficients in each band with _n_ bins.
 	
-These entropy values are arranged in a feature vector for each epoch. Therefore, by calculating the entropy in seven frequency bands for CWT, a feature vector consists of 7 elements for each epoch is formed and continued for the entire EEG signals. The sleep stage classification process is ended by feeding these features to classifier.
+These entropy values are arranged in a feature vector for each epoch. Therefore, by calculating the entropy in seven frequency bands for CWT, a feature vector consisting of 7 elements for each epoch is formed. This is repeated for all epochs in the entire EEG signal. The sleep stage classification process is then continued by feeding these features into different classifiers, discussed subsequently.
 
 # Supervised Learning after Feature Extraction
 [Code (Jupyter Notebook)](https://nbviewer.jupyter.org/github/fkarimzadeh6/CX4240_project/blob/Nael/clustering_top_v2.ipynb)
 ## Dataset After Feature Extraction
-The original dataset after pre-processing of the signals consists of 16330 samples, 1633 each from 10 different subjects. Each sample is accompanied by a label (N1, N2, N3, N4 and REM) denoted by 0,1,2,3,4 respectively. The dataset is trimmed to eliminate the first 700 samples which consists entirely of a single label (0). This would have biased the dataset heavily towards a single label. The trimmed dataset now consists of 9330 samples each with 7 features. The following charts shows the distribution of various labels within the dataset. The dataset contains the most of the N2 stage as is expected in a standard sleeping pattern of a subject:
+The original dataset after pre-processing and feature extraction of the signals consists of 16330 samples, 1633 each from 10 different subjects. Each sample refers to a single epoch, as explained above, and is accompanied by a label (N1, N2, N3, N4 and REM) denoted by 0,1,2,3,4 respectively. The dataset is trimmed to eliminate the first 700 samples from each subject (1633 samples per subject) which consists entirely of a single label (0). This would have biased the dataset heavily towards a single label. The trimmed dataset now consists of ((1633-700)*10=)9330 samples each with 7 features. The following charts shows the distribution of various labels within the dataset. The dataset contains the most of the N2 stage as is expected in a standard sleeping pattern of a subject:
 
 ![image](https://github.com/fkarimzadeh6/CX4240_project/blob/Nael/pics/pie.png)
 
@@ -111,26 +111,6 @@ This is slightly lower than that achieved by SVM but not significantly so. A det
   <img src="https://github.com/fkarimzadeh6/CX4240_project/blob/Nael/pics/KNNconfusion.png" width="400" />
   <img src="https://github.com/fkarimzadeh6/CX4240_project/blob/Nael/pics/KNNconfusionnormal.png" width="400" />
 </p>
-
-
-# Random Forest Ensemble for Predicting Sleep Cycle Stages
-[Code (Jupyter Notebook)](https://github.com/fkarimzadeh6/CX4240_project/blob/Nihad-Ljubuncic/RandomForest.ipynb)
-## Data Organization
-
-Given 10 separate subjects, 1633 samples were recorded for each, giving a total of 16330 samples. However, given the nature of a sleep study, the data set was trimmed down to the last 834 samples since the first samples were populated with a single label (wake). Labels for each stage in the sleep cycle are given as 0, 1, 2, 3, and 5 for the stages N1, N2, N3, N4, and REM, respectively.
-
-## Single Random Forest
-
-Random Forest Ensemble works by creating n number of decision trees and splitting the data either based off of Gini impurity or information gain between splits. Initially a single Random Forest was implemented on the data set with 40 separate trees; this yielded good results while keeping runtime low. Decision trees were split based on maximum information gain per split. Because we had ten different subjects, one was saved for testing while the others were used for training. This meant that our data was split 90% for training, and 10% for testing. As a result, around 82% accuracy was achieved by using Random Forest.
-
-
-![image](https://github.com/fkarimzadeh6/CX4240_project/blob/Nihad-Ljubuncic/heatmap.png)
-## Random Forest with Cross-Validation
-
-In order to achieve a more accurate result, K fold cross-validation was also implemented for the data set. Cross validation is typically used to combat overfitting. Because the data was already split into 10 individual subjects, 10 folds were used in congruence with Random Forest Ensemble. This means that the same Random Forest algorithm as before was run, however each subject's data set acted as the test data for one iteration. On average between each fold, results were still around 82% accuracy. 
-## Tuning
-
-The RandomForestClassifier function is provided with Scikit Learn, and has many different potential parameters. In order to reach the highest result possible the Random Forest was run with many different parameters. Use of the out-of-bag (OOB_score) parameter proved to be very useful, since it helps fit and validate the data while being trained. The precision score of the Random Forest on this dataset came to be 76%. 
 
 ## References:
 1. http://www.cs.columbia.edu/~mcollins/courses/6998-2012/notes/perc.converge.pdf
