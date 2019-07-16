@@ -18,7 +18,12 @@ Considering this fact, the convergance of the algorithm is a fair metric to veri
 Support Vector machines have been used to classify EEG signals in several previous research works[2]. Lajnef *et al* have so far demonstrated one of the best result on EEG classifcation. Their endevor focused on the the use of a dendogram based multi class SVM that achieved an overall accuracy of 92%. Our work focuses on the classical one-vs-one multiclass classification using SVM, employing different kernels. As mentioned before, the dataset does not appear to be linearly separable and therefore requires non-linear kernels for SVM. 
 
 #### Cross Validation and Hyperparamters
-For this work, we chose to optimize two hyper parameters: gamma (for regulairzation) and C (penalty paramter for the error function). The optimization of parameters was done using a 5-fold cross validation on the traininng dataset. The training dataset consisted of 90% of the original dataset, while the remaining 10% was left for testing. 
+For this work, we chose to optimize two hyper parameters: gamma (for regulairzation) and C (penalty paramter for the error function). The optimization of parameters was done using a 5-fold cross validation on the traininng dataset. The training dataset consisted of 90% of the original dataset, while the remaining 10% was left for testing. The scoring metric upon which the cross_validation was judged was the average accuracy of prediction. 
+
+=====================
+hyperparameter, C
+=====================
+The parameter 'C' is the penalty parameter for error in an SVM and determines the degree of softness of an SVM. A lower value of C allows some support vectors to be placed on the wrong side of the margin, therby trading error in training for more robustness and stability in the model overall. A high value of C hardens the SVM, allowing little missclassification. The variation in accuracy with changes in C is shown. The graph shows a maxima for C at around 3.0, showing the SVM to be somwhat soft in nature. Hardening the SVM with high C values shows drastic decline in accuracy, as if expected due to a hit on the robustness of the model as a whole. 
 
 
 ## References
