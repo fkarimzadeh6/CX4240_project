@@ -32,7 +32,7 @@ During  the  past  decades,  a  great  amount  of research   has   been   devote
   
   ![Image](https://github.com/fkarimzadeh6/CX4240_project/blob/master/Figure/SleepStageProcess.PNG)
   
-## Dataset:
+## Raw Dataset:
   
   The publicly available sleep datasets provided by [PhysioBank](http://physionet.org/physiobank/database/sleep-edfx/) has been employed in this study to assess the proposed methods. The utilized set in the SleepEDF Database contains ten healthy subjects without any sleep-related medication. The PSGs include EEG, EOG and EMG signals of healthy young subjects within the age range of 21-35. The EEG signal has been sampled at 100 Hz, divided into 30 s epochs and manually annotated. The annotations consist of sleep stages including W, R, N1, N2, N3. For this study, the single-channel Pz-Oz is used according to former studies [21], [34], as it has been suggested that deeper sleep stages are better detected (visually) in this channel. The overal percentage of each stage in our dataset are illustrated in figure 3.
 
@@ -52,7 +52,7 @@ These entropy values are arranged in a feature vector for each epoch. Therefore,
 
 # Supervised Learning after Feature Extraction
 [Code (Jupyter Notebook)](https://nbviewer.jupyter.org/github/fkarimzadeh6/CX4240_project/blob/Nael/clustering_top_v2.ipynb)
-## Dataset
+## Dataset After Feature Extraction
 The original dataset after pre-processing of the signals consists of 16330 samples, 1633 each from 10 different subjects. Each sample is accompanied by a label (N1, N2, N3, N4 and REM) denoted by 0,1,2,3,4 respectively. The dataset is trimmed to eliminate the first 700 samples which consists entirely of a single label (0). This would have biased the dataset heavily towards a single label. The trimmed dataset now consists of 9330 samples each with 7 features. The following charts shows the distribution of various labels within the dataset. The dataset contains the most of the N2 stage as is expected in a standard sleeping pattern of a subject:
 
 ![image](https://github.com/fkarimzadeh6/CX4240_project/blob/Nael/pics/pie.png)
