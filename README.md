@@ -43,13 +43,13 @@ During  the  past  decades,  a  great  body  of research   has   been   devoted 
 ## Feature Extraction: 
 
   Contineous wavelet transform (CWT) is used to represent EEG signals into the time-frequency domain. We employed mother wavelets of Daubechies (db20) with center frequency of 0.67. After passing the EEGs through wavelet's filters, entropy of each filtered signal is determined according to Eq.1 for each of the frequency bands including 
-  -delta (0-4 Hz), 
-  -theta (4-8 Hz), 
-  -alpha (8-12 Hz), 
-  -beta1(13-22 Hz), 
-  -beta2 (022-30 Hz),  
-  -sleep spindle(12-14 Hz),
-  -K-complex (0.5-1.5 Hz); 
+  - delta (0-4 Hz), 
+  - theta (4-8 Hz), 
+  - alpha (8-12 Hz), 
+  - beta1(13-22 Hz), 
+  - beta2 (022-30 Hz),  
+  - sleep spindle(12-14 Hz),
+  - K-complex (0.5-1.5 Hz); 
   
   therefore, 7 frequency bands are totally considered. 
   
