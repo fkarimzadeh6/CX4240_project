@@ -27,12 +27,28 @@ During  the  past  decades,  a  great  body  of research   has   been   devoted 
   2. Feature Extraction
   3. Classification 
   
-  ![Image]()
+  ![Image](https://github.com/fkarimzadeh6/CX4240_project/blob/master/Figure/SleepStageProcess.PNG)
   
-  ## Data:
+## Data:
   
   publicly available sleep datasets provided by [PhysioBank](http://physionet.org/physiobank/database/sleep-edfx/) has been employed in this study to assess the proposed methods. The utilized set is the SleepEDF Database contains ten healthy subjects without any sleep-related medication. The PSGs include EEG, EOG and EMG signals of healthy young subjects within the age range of 21-35. The EEG has been sampled at 100 Hz, divided into 30 s epochs and manually annotated. The annotationsconsist of sleep stages including W, R, N1, N2, N3. For this study, the single-channel Pz-Oz is used according to former studies [21], [34], as it has been suggested that deeper sleep
-stages are better detected (visually) in this channel. 
+stages are better detected (visually) in this channel. The overal percentage of each stage in our dataset are illustrated in figure 3.
+
+## Preprocessing:
+
+  To enhance the EEG signal quality, a preprocessing step is required. Given a raw input EEG signal, a band-pass filter (Butterworth of order eight) with pass-band bandwidth of 0.5–40 Hz is applied. We also remove the movement noises by using this range, as these noise usually accure at much higher frequency.
+  
+## Feature Extraction: 
+
+  Contineous wavelet transform (CWT) is used to represent EEG signals into the time-frequency domain \cite{LFraiwan3}. We employed mother wavelets of Daubechies (db20) with center frequency of 0.67. After passing the EEGs through wavelet's filters, entropy of each filtered signal is determined according to Eq.~\ref{eq31} for each of the frequency bands shown in Table~\ref{tab01}. Moreover, Beta band is divided into two sub-bands with frequencies of $ 13-22 $ and $ 22-35 Hz $; therefore, 7 frequency bands are totally considered. 
+	
+	\begin{equation}
+	\label{eq31}
+	Ent=-\Sigma_{i=1}^n p_i log p_i
+	\end{equation}
+	where $ p $ is the histogram distribution of wavelet coefficients in each band with $ n $ bins.
+	
+	These entropy values are arranged in a feature vector for each epoch. Therefore, by calculating the entropy in seven frequency bands for CWT, a feature vector consists of 7 elements for each epoch is formed and continued for the entire EEG signals. The sleep stage classification process is ended by feeding these features to classifier.
   
   
   
