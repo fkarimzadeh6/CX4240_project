@@ -1,7 +1,7 @@
-<p align="center">
-# Automatic Annotation of EEG signals for different stages of a sleep cycle using Machine Learning
-## Foroozan Karimzadeh, Nael Mizanur Rahman, Nihad Ljubuncic
-</p>
+
+# 		Automatic Annotation of EEG signals for different stages of a sleep cycle using Machine Learning
+## 		Foroozan Karimzadeh, Nael Mizanur Rahman, Nihad Ljubuncic
+
 
 # Problem Definition and Motivation:
 During  the  past  decades,  a  great  body  of research   has   been   devoted   to   automatic   sleep   stage scoring using the electroencephalogram (EEG). According to the AASM manual, each of the five stages is defined below and also illustrated in Fig. 1: ![Image](https://github.com/fkarimzadeh6/CX4240_project/blob/master/Figure/Stage.jpg) Fig.1. This figure illustrates Wake, N1, N2, N3, REM stages, from top to bottom panels, respectively.
