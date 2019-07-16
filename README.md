@@ -1,11 +1,11 @@
 # Supervised Learning after Feature Extraction
 [Code (Jupyter Notebook)](https://nbviewer.jupyter.org/github/fkarimzadeh6/CX4240_project/blob/Nael/clustering_top_v2.ipynb)
-### Dataset
+## Dataset
 The original dataset consists of 16330 samples, 1633 each from 10 different subjects. Each sample is accompanied by a label (N1, N2, N3, N4 and REM) denoted by 0,1,2,3,4 respectively. The dataset is trimmed to eliminate the first 833 samples which consists entirely of a single label (0). This would have biased the dataset heavily towards a single label. The trimmed dataset now consists of 8330 samples each with 7 features. The following charts shows the distribution of various labels within the dataset. The dataset contains the most of the N2 stage as is expected in a standard sleeping pattern of a subject:
 
 ![image](https://github.com/fkarimzadeh6/CX4240_project/blob/Nael/pics/pie.png)
 
-### Perceptron Algorithm 
+## Perceptron Algorithm 
 The Perceptron learning algorithm is a linear classifer that assigns weights to features of a sample to generate a hyperplane. The plane  is then updated based on any wrong classifications. This continues until the weights converge to an optimum solution (the average loss changes by less than a tolerance between successive iterations). The perceptron algorithm is guaranteed to converge, provided the dataset is linearly separable. 
 
 <p align="center">
@@ -17,7 +17,7 @@ Considering this fact, the convergance of the algorithm is a fair metric to veri
 ## Support Vector Machine
 Support Vector machines have been used to classify EEG signals in several previous research works[2]. Lajnef *et al* have so far demonstrated one of the best result on EEG classifcation. Their endevor focused on the the use of a dendogram based multi class SVM that achieved an overall accuracy of 92%. Our work focuses on the classical one-vs-one multiclass classification using SVM, employing different kernels. As mentioned before, the dataset does not appear to be linearly separable and therefore requires non-linear kernels for SVM. 
 
-## Cross Validation and Hyperparamters
+### Cross Validation and Hyperparamters
 For this work, we chose to optimize two hyper parameters: gamma (for regulairzation) and C (penalty paramter for the error function). The optimization of parameters was done using a 5-fold cross validation on the traininng dataset. The training dataset consisted of 90% of the original dataset, while the remaining 10% was left for testing. The scoring metric upon which the cross_validation was judged was the average accuracy of prediction. 
 
 
