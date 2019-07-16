@@ -41,7 +41,7 @@ The variation of accuracy across gamma is plotted below, showing a local maxima 
   <img src="https://github.com/fkarimzadeh6/CX4240_project/blob/Nael/pics/svmconfusionmatrix.png" width="400" />
   <img src="https://github.com/fkarimzadeh6/CX4240_project/blob/Nael/pics/svmconfusionmatrix2.png" width="400" />
 </p>
-
+The labels 0,1,2,3 and 5 represent labels Wake,N1,N2,N3 and REM sleep stages respectively. The SVM classifier most of the samples as N2, followed by the wake stage. These two labels also have the highest precision and recall. A reason for this could be the dataset itself which has these two labels in the most abundance causing the classifier to be slighlty biased towards these two labels. This is complimented by the fact that label 1 (N1) is least prevalant in the dataset and is also classified the least by the classifier in the testing set. The overall accuracy of 54.23% is 34.23% above random and any potential improvements could require more efficent kernels or even different classifiers itself.
 
 ## References
 1. 
