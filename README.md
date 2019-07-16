@@ -9,7 +9,7 @@ Given 10 separate subjects, 1633 samples were recorded for each, giving a total 
 Random Forest Ensemble works by creating n number of decision trees and splitting the data either based off of Gini impurity or information gain between splits. Initially a single Random Forest was implemented on the data set with 40 separate trees; this yielded good results while keeping runtime low. Decision trees were split based on maximum information gain per split. Because we had ten different subjects, one was saved for testing while the others were used for training. This meant that our data was split 90% for training, and 10% for testing. As a result, around 82% accuracy was achieved by using Random Forest.
 
 
-![image](https://github.com/fkarimzadeh6/CX4240_project/blob/Nihad-Ljubuncic/heatmap.png)
+![image](https://github.com/fkarimzadeh6/CX4240_project/blob/Nihad-Ljubuncic/heatmap copy.png)
 ![image](https://github.com/fkarimzadeh6/CX4240_project/blob/Nihad-Ljubuncic/class_report.png)
 ## Random Forest with Cross-Validation
 
