@@ -4,7 +4,14 @@
 
 
 # Problem Definition and Motivation:
-During  the  past  decades,  a  great  amount  of research   has   been   devoted   to   automatic   sleep   stage scoring using the electroencephalogram (EEG) signal. According to the AASM manual, sleep EEG consists of 5 stages. Each of the five stages is defined below and also illustrated in Fig. 1: ![Image](https://github.com/fkarimzadeh6/CX4240_project/blob/master/Figure/Stage.jpg) *Fig.1. This figure illustrates Wake, N1, N2, N3, REM stages, from top to bottom panels, respectively.*
+During  the  past  decades,  a  great  amount  of research   has   been   devoted   to   automatic   sleep   stage scoring using the electroencephalogram (EEG) signal. Automatic and accurate classification of sleep stages from EEG signals are critical due to the following reasons:
+  - First, the fact that these information will be used for dioagnosing different sleep disorders such as sleep apnea, parasomnia, narcolepsy etc..  
+  - Second, manual sleep scoring is a time-consuming process for an expert which is prone to human error. 
+  - Finally, smart EEG machines reduce depandance on expert perosnnel, who may not be readily avaibale at all times. 
+  
+  However, the results are not yet satisfactory to be used as a standard procedure  in  clinical  studies. In  this  project, we have investigated different machine learning algorithms to automatically classify sleep stages and compared the results.
+  
+  According to the AASM manual, sleep EEG consists of 5 stages. Each of the five stages is defined below and also illustrated in Fig. 1: ![Image](https://github.com/fkarimzadeh6/CX4240_project/blob/master/Figure/Stage.jpg) *Fig.1. This figure illustrates Wake, N1, N2, N3, REM stages, from top to bottom panels, respectively.*
 
 
 **-W:** Awake state (stage W) is characterized by alpha or faster frequency bands occupying more than 50% of the epoch, frequent eye movements and high EMG tone.
@@ -17,12 +24,6 @@ During  the  past  decades,  a  great  amount  of research   has   been   devote
 
 **-REM:** Upon sleep scoring an epoch is marked as REM when saw-tooth waves along with rapid eye movements as well as lowest EMG signals are observed through each epoch.
 
-  Automatic and accurate classification of sleep stages from EEG signals are critical due to the following reasons:
-  - First, the fact that these information will be used for dioagnosing different sleep disorders such as sleep apnea, parasomnia, narcolepsy etc..  
-  - Second, manual sleep scoring is a time-consuming process for an expert which is prone to human error. 
-  - Finally, smart EEG machines reduce depandance on expert perosnnel, who may not be readily avaibale at all times. 
-  
-  However, the results are not yet satisfactory to be used as a standard procedure  in  clinical  studies. In  this  project, we have investigated different machine learning algorithms to automatically classify sleep stages and compared the results.
   
 # Sleep Stage Classification   
   The overal process for sleep stage scoring consists of three steps which are explained below: 
