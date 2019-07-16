@@ -40,18 +40,12 @@ stages are better detected (visually) in this channel. The overal percentage of 
   
 ## Feature Extraction: 
 
-  Contineous wavelet transform (CWT) is used to represent EEG signals into the time-frequency domain \cite{LFraiwan3}. We employed mother wavelets of Daubechies (db20) with center frequency of 0.67. After passing the EEGs through wavelet's filters, entropy of each filtered signal is determined according to Eq.~\ref{eq31} for each of the frequency bands shown in Table~\ref{tab01}. Moreover, Beta band is divided into two sub-bands with frequencies of 13-22 and 22-35 Hz; therefore, 7 frequency bands are totally considered. 
+  Contineous wavelet transform (CWT) is used to represent EEG signals into the time-frequency domain \cite{LFraiwan3}. We employed mother wavelets of Daubechies (db20) with center frequency of 0.67. After passing the EEGs through wavelet's filters, entropy of each filtered signal is determined according to Eq.1 for each of the frequency bands including delta (0-4 Hz), theta (4-8 Hz), alpha (8-12 Hz), beta1(13-22 Hz), beta2 ()022-30 Hz. We also extract features related to sleep spindle(12-14 Hz) and K-complex (0.5-1.5 Hz). Moreover, Beta band is divided into two sub-bands with frequencies of 13-22 and 22-35 Hz; therefore, 7 frequency bands are totally considered. 
   ![Image](https://github.com/fkarimzadeh6/CX4240_project/blob/master/Figure/entropy.JPG)
 	
 where _p_ is the histogram distribution of wavelet coefficients in each band with _n_ bins.
 	
-	These entropy values are arranged in a feature vector for each epoch. Therefore, by calculating the entropy in seven frequency bands for CWT, a feature vector consists of 7 elements for each epoch is formed and continued for the entire EEG signals. The sleep stage classification process is ended by feeding these features to classifier.
+These entropy values are arranged in a feature vector for each epoch. Therefore, by calculating the entropy in seven frequency bands for CWT, a feature vector consists of 7 elements for each epoch is formed and continued for the entire EEG signals. The sleep stage classification process is ended by feeding these features to classifier.
   
   
  
-
-Your Pages site will use the layout and styles from the Jekyll theme you have selected in your [repository settings](https://github.com/fkarimzadeh6/CX4240_project/settings). The name of this theme is saved in the Jekyll `_config.yml` configuration file.
-
-### Support or Contact
-
-Having trouble with Pages? Check out our [documentation](https://help.github.com/categories/github-pages-basics/) or [contact support](https://github.com/contact) and we’ll help you sort it out.
