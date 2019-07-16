@@ -10,6 +10,7 @@ Random Forest Ensemble works by creating n number of decision trees and splittin
 
 
 ![image](https://github.com/fkarimzadeh6/CX4240_project/blob/Nihad-Ljubuncic/heatmap.png)
+![image](https://github.com/fkarimzadeh6/CX4240_project/blob/Nihad-Ljubuncic/class_report.png)
 ## Random Forest with Cross-Validation
 
 In order to achieve a more accurate result, K fold cross-validation was also implemented for the data set. Cross validation is typically used to combat overfitting. Because the data was already split into 10 individual subjects, 10 folds were used in congruence with Random Forest Ensemble. This means that the same Random Forest algorithm as before was run, however each subject's data set acted as the test data for one iteration. On average between each fold, results were still around 82% accuracy. 
