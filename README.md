@@ -14,7 +14,7 @@ The Perceptron learning algorithm is a linear classifer that assigns weights to 
 
 Considering this fact, the convergance of the algorithm is a fair metric to verify the linearity of the dataset. Should the algorithm converge when applied to the given samples, the dataset can be assumed to be linearly separable. The perceptron algorithm, however, failed to converge on the EEG dataset even after 50000 iterations. 
 <p align="center">
-  <img width="460" height="300" src="https://github.com/fkarimzadeh6/CX4240_project/blob/Nael/pics/perceptronloss.PNG">
+  <img width="460" height="300" src="https://github.com/fkarimzadeh6/CX4240_project/blob/Nael/pics/perceptronloss.png">
 </p>
 The difference in the average loss even after 50000 iterations showed variations greater than the tolerance of (1e-3) and therefore failed to provide an final stable weight matrix. 
 There was, thus, no sufficiently viable linear hyperplane that could efficently separate the different classes. 
