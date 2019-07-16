@@ -126,10 +126,6 @@ This is slightly lower than that achieved by SVM but not significantly so. A det
 
 # Random Forest Ensemble for Predicting Sleep Cycle Stages with EEG Signals
 [Code (Jupyter Notebook)](https://github.com/fkarimzadeh6/CX4240_project/blob/Nihad-Ljubuncic/RF_with_kfold.ipynb)
-## Data Organization
-
-Given 10 separate subjects, 1633 samples were recorded for each, giving a total of 16330 samples. However, given the nature of a sleep study, the data set was trimmed down to the last 834 samples since the first samples were populated with a single label (wake). Labels for each stage in the sleep cycle are given as 0, 1, 2, 3, and 5 for the stages awake, N1, N3, N4, and REM, respectively.
-
 
 ## Tuning
 
