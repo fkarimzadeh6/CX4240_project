@@ -149,7 +149,12 @@ In order to achieve a more accurate result, K fold cross-validation was also imp
 ### 10-Fold Cross Validation Results
 ![image](https://github.com/fkarimzadeh6/CX4240_project/blob/Nihad-Ljubuncic/kfoldtable.png)
 
+## Conclusion
+* Of all machine learning algorithms, our most accurate model was Random Forest, with an average accuracy of 80%
+* Use of these machine learning algorithms could streamline data acquisition and interpretation for sleep studies
 
+## Future work
+* Choosing epoch equal to 30 sec in not optimal. Future work would be finding better way to devide data into stages with different lenght. 
 
 
 ## References:
