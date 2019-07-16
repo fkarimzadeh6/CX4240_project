@@ -1,6 +1,6 @@
 
-# 		Automatic Annotation of EEG signals for different stages of a sleep cycle using Machine Learning
-## 		Foroozan Karimzadeh, Nael Mizanur Rahman, Nihad Ljubuncic
+# Automatic Annotation of EEG signals for different stages of a sleep cycle using Machine Learning
+## Foroozan Karimzadeh, Nael Mizanur Rahman, Nihad Ljubuncic
 
 
 # Problem Definition and Motivation:
