@@ -17,7 +17,7 @@ During  the  past  decades,  a  great  body  of research   has   been   devoted 
 
 **-REM:** Upon sleep scoring an epoch is marked as REM when saw-tooth waves along with rapid eye movements as well as lowest EMG signals are observed through each epoch.
 
-  Automatic and accurate classification of sleep stages from EEG signals are critical due to three reasons:
+  Automatic and accurate classification of sleep stages from EEG signals are critical due to the following reasons:
   - First, the fact that these information will be used for dioagnosing different sleep disorders such as sleep apnea, parasomnia, narcolepsy etc..  
   - Second, manual sleep scoring is a time-consuming process for an expert which is prone to human error. 
   - Finally, smart EEG machines reduce depandance on expert perosnnel, who may not be readily avaibale at all times. 
