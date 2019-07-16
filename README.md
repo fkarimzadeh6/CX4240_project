@@ -30,7 +30,7 @@ During  the  past  decades,  a  great  amount  of research   has   been   devote
   2. Feature Extraction
   3. Classification 
   
-  ![Image](https://github.com/fkarimzadeh6/CX4240_project/blob/master/Figure/SleepStageProcess.PNG)
+  ![Image](https://github.com/fkarimzadeh6/CX4240_project/blob/master/Figure/sleepstageprocess.png)
   
 ## Raw Dataset:
   
