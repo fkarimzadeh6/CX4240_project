@@ -25,7 +25,7 @@ For this work, we chose to optimize two hyper parameters: gamma (for regulairzat
 The parameter 'C' is the penalty parameter for error in an SVM and determines the degree of softness of an SVM. A lower value of C allows some support vectors to be placed on the wrong side of the margin, therby trading error in training for more robustness and stability in the model overall. A high value of C hardens the SVM, allowing little missclassification. The variation in accuracy with changes in C is shown. The graph shows a maxima for C at around 3.0, showing the SVM to be somwhat soft in nature. Hardening the SVM with high C values shows drastic decline in accuracy, as if expected due to a hit on the robustness of the model as a whole. 
 
 ### Hyperparameter, gamma:
-
+The gamma parameter determines the spread of the RBF kernel. It can be thought of as the inverse of the radius of influence of the samples that are considered to be support vectors by the kernel. A small value of gamma forces teh kernel to adopt a somewhat linear shape, redcuing its curvature. A high vlaue of gamma makes the kernel a bit more non-linear, often allowing islands of decision boundaries to be generated. 
 
 ### Accuracy of SVM
 
@@ -34,8 +34,6 @@ The parameter 'C' is the penalty parameter for error in an SVM and determines th
 1. 
 2. Lajnef, Tarek, et al . "Learning machines and sleeping brains: automatic sleep stage classification using
 decision-tree multi-class support vector machines." Journal of neuroscience methods 250 (2015): 94-105
-```markdown
-Syntax highlighted code block
 
 
 For more details see [GitHub Flavored Markdown](https://guides.github.com/features/mastering-markdown/).
