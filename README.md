@@ -9,9 +9,11 @@ The original dataset consists of 16330 samples, 1633 each from 10 different subj
 ### Perceptron Algorithm 
 The Perceptron learning algorithm is a linear classifer that assigns weights to features of a sample to generate a hyperplane. The plane  is then updated based on any wrong classifications. This continues until the weights converge to an optimum solution (the average loss changes by less than a tolerance between successive iterations). The perceptron algorithm is guaranteed to converge, provided the dataset is linearly separable. 
 
+![image](https://github.com/fkarimzadeh6/CX4240_project/blob/Nael/pics/Capture.PNG)
 
-![image](https://upload.wikimedia.org/wikipedia/commons/a/aa/Perceptron_training_without_bias.gif) ![image](https://github.com/fkarimzadeh6/CX4240_project/blob/Nael/pics/Capture.PNG)
+An example of the change in the hyperplane as the weights are updated is demonstrated below:
 
+![image](https://upload.wikimedia.org/wikipedia/commons/a/aa/Perceptron_training_without_bias.gif) 
 
 
 ```markdown
