@@ -17,12 +17,12 @@ During  the  past  decades,  a  great  amount  of research   has   been   devote
 
 **-REM:** Upon sleep scoring an epoch is marked as REM when saw-tooth waves along with rapid eye movements as well as lowest EMG signals are observed through each epoch.
 
-  Automatic and accurate classification of sleep stages from EEG signals are critical due to three reasons:
+  Automatic and accurate classification of sleep stages from EEG signals are critical due to the following reasons:
   - First, the fact that these information will be used for dioagnosing different sleep disorders such as sleep apnea, parasomnia, narcolepsy etc..  
   - Second, manual sleep scoring is a time-consuming process for an expert which is prone to human error. 
   - Finally, smart EEG machines reduce depandance on expert perosnnel, who may not be readily avaibale at all times. 
   
-  However, the results are not yet satisfactory to be used as a standard procedure  in  clinical  studies.In  this  project, we have investigated different machine learning algorithms to automatically classify sleep stages and compared the results.
+  However, the results are not yet satisfactory to be used as a standard procedure  in  clinical  studies. In  this  project, we have investigated different machine learning algorithms to automatically classify sleep stages and compared the results.
   
 # Sleep Stage Classification   
   The overal process for sleep stage scoring consists of three steps which are explained below: 
@@ -34,7 +34,7 @@ During  the  past  decades,  a  great  amount  of research   has   been   devote
   
 ## Raw Dataset:
   
-  The publicly available sleep datasets provided by [PhysioBank](http://physionet.org/physiobank/database/sleep-edfx/) has been employed in this study to assess the proposed methods. The utilized set in the SleepEDF Database contains ten healthy subjects without any sleep-related medication. The PSGs include EEG, EOG and EMG signals of healthy young subjects within the age range of 21-35. The EEG signal has been sampled at 100 Hz, divided into 30 s epochs and manually annotated. The annotations consist of sleep stages including W, R, N1, N2, N3. For this study, the single-channel Pz-Oz is used according to former studies [21], [34], as it has been suggested that deeper sleep stages are better detected (visually) in this channel. The overal percentages of each stage in our dataset is illustrated in a pie chart in the section: Dataset After Feature Extraction.
+  The publicly available sleep datasets provided by [PhysioBank](http://physionet.org/physiobank/database/sleep-edfx/) has been employed in this study to assess the proposed methods. The utilized set in the SleepEDF Database contains ten healthy subjects without any sleep-related medication. The PSGs include EEG, EOG and EMG signals of healthy young subjects within the age range of 21-35. The EEG signal has been sampled at 100 Hz, divided into 30 s epochs and manually annotated. The annotations consist of sleep stages including W, R, N1, N2, N3. For this study, the single-channel Pz-Oz is used according to former studies [1], as it has been suggested that deeper sleep stages are better detected (visually) in this channel. The overal percentages of each stage in our dataset is illustrated in a pie chart in the section: Dataset After Feature Extraction.
 
 ## Preprocessing:
 
@@ -42,7 +42,16 @@ During  the  past  decades,  a  great  amount  of research   has   been   devote
   
 ## Feature Extraction: 
 
-  Contineous wavelet transform (CWT) is used to represent EEG signals into the time-frequency domain \cite{LFraiwan3}. We employed mother wavelets of Daubechies (db20) with center frequency of 0.67. After passing the EEGs through wavelet's filters, entropy of each filtered signal is determined according to Eq.1 for each of the frequency bands including delta (0-4 Hz), theta (4-8 Hz), alpha (8-12 Hz), beta1(13-22 Hz), beta2 ()022-30 Hz. We also extract features related to sleep spindle(12-14 Hz) and K-complex (0.5-1.5 Hz); therefore, 7 frequency bands are totally considered. 
+  Contineous wavelet transform (CWT) is used to represent EEG signals into the time-frequency [2]. We employed mother wavelets of Daubechies (db20) with center frequency of 0.67. After passing the EEGs through wavelet's filters, entropy of each filtered signal is determined according to Eq.1 for each of the frequency bands including 
+  - delta (0-4 Hz), 
+  - theta (4-8 Hz), 
+  - alpha (8-12 Hz), 
+  - beta1(13-22 Hz), 
+  - beta2 (022-30 Hz),  
+  - sleep spindle(12-14 Hz), 
+  - K-complex (0.5-1.5 Hz); 
+  
+  Therefore, 7 frequency bands are totally considered. 
   
   ![Image](https://github.com/fkarimzadeh6/CX4240_project/blob/master/Figure/entropy.JPG)
 	
@@ -60,7 +69,7 @@ The original dataset after pre-processing and feature extraction of the signals 
 ![image](https://github.com/fkarimzadeh6/CX4240_project/blob/Nael/pics/pie.png)
 
 ## Perceptron Algorithm 
-The Perceptron learning algorithm is a linear classifer that assigns weights to features of a sample to generate a hyperplane. The plane  is then updated based on any wrong classifications. This continues until the weights converge to an optimum solution (the average loss changes by less than a tolerance between successive iterations). The perceptron algorithm is guaranteed to converge, provided the dataset is linearly separable[1]. 
+The Perceptron learning algorithm is a linear classifer that assigns weights to features of a sample to generate a hyperplane. The plane  is then updated based on any wrong classifications. This continues until the weights converge to an optimum solution (the average loss changes by less than a tolerance between successive iterations). The perceptron algorithm is guaranteed to converge, provided the dataset is linearly separable[3]. 
 
 <p align="center">
   <img width="500" height="320" src="https://github.com/fkarimzadeh6/CX4240_project/blob/Nael/pics/Capture.PNG">
@@ -74,7 +83,7 @@ The difference in the average loss even after 50000 iterations showed variations
 There was, thus, no sufficiently viable linear hyperplane that could efficently separate the different classes. 
 
 ## Support Vector Machine
-Support Vector machines have been used to classify EEG signals in several previous research works[2]. Lajnef *et al* have so far demonstrated one of the best result on EEG classifcation. Their endevor focused on the the use of a dendogram based multi class SVM that achieved an overall accuracy of 92%. Our work focuses on the classical one-vs-one multiclass classification using SVM, employing  non-linear kernels. As mentioned before, the dataset does not appear to be linearly separable and therefore requires non-linear kernels for SVM. For our current study, we resorted to the Radiul Basis Function kernel and optimized the hyperparameters associated with it.
+Support Vector machines have been used to classify EEG signals in several previous research works[4]. Lajnef *et al* have so far demonstrated one of the best result on EEG classifcation. Their endevor focused on the the use of a dendogram based multi class SVM that achieved an overall accuracy of 92%. Our work focuses on the classical one-vs-one multiclass classification using SVM, employing  non-linear kernels. As mentioned before, the dataset does not appear to be linearly separable and therefore requires non-linear kernels for SVM. For our current study, we resorted to the Radiul Basis Function kernel and optimized the hyperparameters associated with it.
 
 ### Cross Validation and Hyperparamters
 For this work, we chose to optimize two hyper parameters: gamma (for 'curvature' of the kernel) and C (penalty parameter for the error function). The optimization of parameters was done using a 5-fold cross validation on the training dataset. The training dataset consisted of 90% of the original dataset, while the remaining 10% was left for testing. The scoring metric upon which the cross-validation was judged was the average accuracy of prediction. It is important to note that both the training and testing feature matrices were scaled across each feature before being fed into the SVM.
@@ -115,10 +124,12 @@ This is slightly lower than that achieved by SVM but not significantly so. A det
 </p>
 
 ## References:
-1. http://www.cs.columbia.edu/~mcollins/courses/6998-2012/notes/perc.converge.pdf
-2. Lajnef, Tarek, et al . "Learning machines and sleeping brains: automatic sleep stage classification using
+1. [21]   V.  Bajaj  and  R.  B.  Pachori,  “Automatic  classification  of  sleep  stages based on the time-frequency  image of EEG signals,” Comput. Methods Programs Biomed. , vol. 112, no. 3, pp. 320–328, 2013.
+2. L. Fraiwan, K. Lweesy, N. Khasawneh, M. Fraiwan, H. Wenz, H. Dickhaus, et al. Classification of sleep stages using multi-wavelet time frequency entropy and lda Methods Inf. Med., 49 (3) (2010), p. 230
+3. http://www.cs.columbia.edu/~mcollins/courses/6998-2012/notes/perc.converge.pdf
+4. Lajnef, Tarek, et al . "Learning machines and sleeping brains: automatic sleep stage classification using
 decision-tree multi-class support vector machines." Journal of neuroscience methods 250 (2015): 94-105
-3. Aboalayon, Khald, et al. "Sleep stage classification using EEG signal analysis: a comprehensive survey and new investigation." Entropy 18.9 (2016): 272.
+5. Aboalayon, Khald, et al. "Sleep stage classification using EEG signal analysis: a comprehensive survey and new investigation." Entropy 18.9 (2016): 272.
   
   
  
