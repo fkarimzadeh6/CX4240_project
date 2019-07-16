@@ -39,7 +39,9 @@ The variation of accuracy across gamma is plotted below, showing a local maxima 
 <p align="center">
   <img width="550" height="320" src="https://github.com/fkarimzadeh6/CX4240_project/blob/Nael/pics/gamma.png">
 </p>
-### Accuracy of SVM
+### Performance metrics of SVM
+**The SVM with an RBF kernel and optimized hyperparameters achieved an accuracy of 54.23% on the test dataset**. A detailed analysis of precision and recall is shown below along with the corresponding confusion matrices:
+![image](https://github.com/fkarimzadeh6/CX4240_project/blob/Nael/pics/svmcomfusionmatrix.png) ![image](https://github.com/fkarimzadeh6/CX4240_project/blob/Nael/pics/svmcomfusionmatrix2.png)
 
 
 ## References
