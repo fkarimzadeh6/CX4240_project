@@ -30,14 +30,14 @@ For this work, we chose to optimize two hyper parameters: gamma (for regulairzat
 The parameter 'C' is the penalty parameter for error in an SVM and determines the degree of softness of an SVM. A lower value of C allows some support vectors to be placed on the wrong side of the margin, therby trading error in training for more robustness and stability in the model overall. A high value of C hardens the SVM, allowing little missclassification. For detailed explanation [click here](https://chrisalbon.com/machine_learning/support_vector_machines/svc_parameters_using_rbf_kernel/). 
 The variation in accuracy with changes in C is shown. The graph shows a maxima for C at around 0.8, showing the SVM to be somwhat soft in nature. Hardening the SVM with high C values shows drastic decline in accuracy, as if expected due to a hit on the robustness of the model as a whole. 
 <p align="center">
-  <img width="460" height="300" src="https://github.com/fkarimzadeh6/CX4240_project/blob/Nael/pics/gamma.png">
+  <img width="550" height="320" src="https://github.com/fkarimzadeh6/CX4240_project/blob/Nael/pics/C.png">
 </p>
 
 ### Hyperparameter, gamma:
 The gamma parameter determines the spread of the RBF kernel. It can be thought of as the inverse of the radius of influence of the samples that are considered to be support vectors by the kernel. A small value of gamma forces teh kernel to adopt a somewhat linear shape, redcuing its curvature. A high vlaue of gamma makes the kernel a bit more non-linear, often allowing islands of decision boundaries to be generated. For detailed explanation [click here](https://chrisalbon.com/machine_learning/support_vector_machines/svc_parameters_using_rbf_kernel/).
 The variation of accuracy across gamma is plotted below, showing a local maxima at gamma = 3. While it is possible that this maxima is just a local maxima and another global maxima may exist, time and computation restrictions prevented us from boradening the search space for this parameter.
 <p align="center">
-  <img width="460" height="300" src="https://github.com/fkarimzadeh6/CX4240_project/blob/Nael/pics/gamma.png">
+  <img width="550" height="320" src="https://github.com/fkarimzadeh6/CX4240_project/blob/Nael/pics/gamma.png">
 </p>
 ### Accuracy of SVM
 
