@@ -42,10 +42,12 @@ The variation of accuracy across gamma is plotted below, showing a local maxima 
   <img src="https://github.com/fkarimzadeh6/CX4240_project/blob/Nael/pics/svmconfusionmatrix2.png" width="400" />
 </p>
 The labels 0,1,2,3 and 5 represent labels Wake,N1,N2,N3 and REM sleep stages respectively. The SVM classifies most of the samples as N2, followed by the wake stage. These two labels also have the highest precision and recall. A reason for this could be the dataset itself which has these two labels in the most abundance causing the classifier to be slighlty biased towards these two labels. This is complimented by the fact that label 1 (N1) is least prevalant in the dataset and is also classified the least by the classifier in the testing set. The overall accuracy of 54.23% is 34.23% above random and any potential improvements could require more efficent kernels or even totally different classifiers.
-## K Nearest Neighbour Classifier
+
+## K Nearest Neighbour Classifier:
 The KNN classifier classifies a sample based on its proximity to samples of different classes in its vicinity. It is a popular clustering algorithm and has been used for sleep stage classification as well [3]. The most important hyperparameter to be trained here is the number of neighbours to be considered. If the number of neighbours is too small, it could lead to overfitting and a loss of generality in the dataset. The cross validation sheme used here is similar to the one articulated for the SVM. The variation in accuracy with the number of neighbours is given below: 
 ![image](https://github.com/fkarimzadeh6/CX4240_project/blob/Nael/pics/KNNcv.png)
-## References
+
+## References:
 1. http://www.cs.columbia.edu/~mcollins/courses/6998-2012/notes/perc.converge.pdf
 2. Lajnef, Tarek, et al . "Learning machines and sleeping brains: automatic sleep stage classification using
 decision-tree multi-class support vector machines." Journal of neuroscience methods 250 (2015): 94-105
