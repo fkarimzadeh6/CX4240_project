@@ -24,7 +24,7 @@ Support Vector machines have been used to classify EEG signals in several previo
 
 ### Cross Validation and Hyperparamters
 For this work, we chose to optimize two hyper parameters: gamma (for regulairzation) and C (penalty paramter for the error function). The optimization of parameters was done using a 5-fold cross validation on the traininng dataset. The training dataset consisted of 90% of the original dataset, while the remaining 10% was left for testing. The scoring metric upon which the cross_validation was judged was the average accuracy of prediction. 
-
+![image](https://github.com/fkarimzadeh6/CX4240_project/blob/Nael/pics/svmflowchart.PNG)
 
 ### Hyperparameter, C
 The parameter 'C' is the penalty parameter for error in an SVM and determines the degree of softness of an SVM. A lower value of C allows some support vectors to be placed on the wrong side of the margin, therby trading error in training for more robustness and stability in the model overall. A high value of C hardens the SVM, allowing little missclassification. For detailed explanation [click here](https://chrisalbon.com/machine_learning/support_vector_machines/svc_parameters_using_rbf_kernel/). 
