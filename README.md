@@ -16,6 +16,8 @@ Below is a detailed look at the precision and recall for the same run of the Ran
 ## Random Forest with Cross-Validation
 
 In order to achieve a more accurate result, K fold cross-validation was also implemented for the data set. Cross validation is typically used to combat overfitting. Because the data was already split into 10 individual subjects, 10 folds were used in congruence with Random Forest Ensemble. This means that the same Random Forest algorithm as before was run, however each subject's data set acted as the test data for one iteration. On average between each fold, results were still around 82% accuracy. 
+### 10-Fold Cross Validation Results
+![image](https://github.com/fkarimzadeh6/CX4240_project/blob/Nihad-Ljubuncic/kfoldtable.png)
 ## Tuning
 
 The RandomForestClassifier function is provided with Scikit Learn, and has many different potential parameters. In order to reach the highest result possible the Random Forest was run with different paramenters specified. Use of the out-of-bag (OOB_score) parameter proved to be very useful, since it helps fit and validate the data while being trained. 40 decision trees proved to be most efficient, since not much extra accuracy was gained from increasing the number of trees further, only runtime. The macro precision score of the Random Forest on this dataset came to be 76%. 
