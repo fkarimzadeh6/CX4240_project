@@ -35,6 +35,7 @@ The variation in accuracy with changes in C is shown. The graph shows a maxima f
 The gamma parameter determines the spread of the RBF kernel. It can be thought of as the inverse of the radius of influence of the samples that are considered to be support vectors by the kernel. A small value of gamma forces teh kernel to adopt a somewhat linear shape, redcuing its curvature. A high vlaue of gamma makes the kernel a bit more non-linear, often allowing islands of decision boundaries to be generated. For detailed explanation [click here](https://chrisalbon.com/machine_learning/support_vector_machines/svc_parameters_using_rbf_kernel/).
 The variation of accuracy across gamma is plotted below, showing a local maxima at gamma = 3. While it is possible that this maxima is just a local maxima and another global maxima may exist, time and computation restrictions prevented us from boradening the search space for this parameter.
 ![image](https://github.com/fkarimzadeh6/CX4240_project/blob/Nael/pics/gamma.png)
+
 ### Performance metrics of SVM:
 **The SVM with an RBF kernel and optimized hyperparameters achieved an accuracy of 54.23% on the test dataset**. A detailed analysis of precision and recall is shown below along with the corresponding confusion matrices:
 ![image](https://github.com/fkarimzadeh6/CX4240_project/blob/Nael/pics/svmaccuracy.PNG)
@@ -53,6 +54,11 @@ An optimum K_neighbours of 21 was chosen and used on the testing dataset.
 ### Performance Metrics of KNN:
 **The KNN algorithm achieved an accuracy of 52.22% on the test dataset**. 
 This is slightly lower than that achieved by SVM but not significantly so. A detailed look at the confusion matrices plotted below shows the classifer heavily favours label 2 and label 0. Again this is expected due to the imbalance of labels in the original dataset as explained above. 
+![image](https://github.com/fkarimzadeh6/CX4240_project/blob/Nael/pics/KNNcv.png)
+<p float="left">
+  <img src="https://github.com/fkarimzadeh6/CX4240_project/blob/Nael/pics/KNNconfusion.png" width="500" />
+  <img src="https://github.com/fkarimzadeh6/CX4240_project/blob/Nael/pics/KNNconfusionnormal.png" width="500" />
+</p>
 
 ## References:
 1. http://www.cs.columbia.edu/~mcollins/courses/6998-2012/notes/perc.converge.pdf
