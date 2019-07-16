@@ -154,7 +154,7 @@ In order to achieve a more accurate result, K fold cross-validation was also imp
 * Use of these machine learning algorithms could streamline data acquisition and interpretation for sleep studies
 
 ## Future work
-* Choosing epoch equal to 30 sec in not optimal. Future work would be finding better way to devide data into stages with different lenght. 
+* Choosing epoch equal to 30 sec in not optimal. Future work would be finding better way to devide data into stages with different length. 
 
 
 ## References:
