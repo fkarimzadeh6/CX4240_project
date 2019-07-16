@@ -86,7 +86,7 @@ The variation in accuracy with changes in C is shown. The graph shows a maxima f
 
 ### Hyperparameter, gamma:
 The gamma parameter determines the spread of the RBF kernel. It can be thought of as the inverse of the radius of influence of the samples that are considered to be support vectors by the kernel. A small value of gamma forces teh kernel to adopt a somewhat linear shape, redcuing its curvature. A high vlaue of gamma makes the kernel a bit more non-linear, often allowing islands of decision boundaries to be generated. For detailed explanation [click here](https://chrisalbon.com/machine_learning/support_vector_machines/svc_parameters_using_rbf_kernel/).
-The variation of accuracy across gamma is plotted below, showing a local maxima at gamma = 3. While it is possible that this maxima is just a local maxima and another global maxima may exist, time and computation restrictions prevented us from boradening the search space for this parameter.
+The variation of accuracy across gamma is plotted below, showing a local maxima at gamma = 3. While it is possible that this maxima is just a local maxima and another global maxima may exist, time and computation restrictions prevented us from broadening the search space for this parameter.
 ![image](https://github.com/fkarimzadeh6/CX4240_project/blob/Nael/pics/gamma.png)
 
 ### Performance metrics of SVM:
