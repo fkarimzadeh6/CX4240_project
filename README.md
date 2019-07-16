@@ -9,7 +9,7 @@ The original dataset consists of 16330 samples, 1633 each from 10 different subj
 The Perceptron learning algorithm is a linear classifer that assigns weights to features of a sample to generate a hyperplane. The plane  is then updated based on any wrong classifications. This continues until the weights converge to an optimum solution (the average loss changes by less than a tolerance between successive iterations). The perceptron algorithm is guaranteed to converge, provided the dataset is linearly separable. 
 
 <p align="center">
-  <img width="460" height="300" src="https://github.com/fkarimzadeh6/CX4240_project/blob/Nael/pics/Capture.PNG">
+  <img width="480" height="300" src="https://github.com/fkarimzadeh6/CX4240_project/blob/Nael/pics/Capture.PNG">
 </p>
 
 Considering this fact, the convergance of the algorithm is a fair metric to verify the linearity of the dataset. Should the algorithm converge when applied to the given samples, the dataset can be assumed to be linearly separable. The perceptron algorithm, however, failed to converge on the EEG dataset even after 50000 iterations. 
